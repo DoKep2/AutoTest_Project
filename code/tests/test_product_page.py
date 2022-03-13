@@ -111,6 +111,7 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page.open()
     page.go_to_login_page()
 
+
 @pytest.mark.skip
 def test_guest_should_see_empty_cart_title_from_product_page(browser):
     link = "https://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
@@ -119,6 +120,7 @@ def test_guest_should_see_empty_cart_title_from_product_page(browser):
     page.go_to_cart_page()
     cart_page = CartPage(browser, browser.current_url)
     cart_page.should_be_empty_cart_title()
+
 
 @pytest.mark.skip
 def test_product_in_cart_should_disappear(browser):
